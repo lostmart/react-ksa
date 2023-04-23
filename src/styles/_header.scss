@@ -1,0 +1,28 @@
+.header {
+	&__navBar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__navBar img {
+		max-width: 145px;
+	}
+
+	&__navBar__links {
+		display: flex;
+		gap: 10px;
+	}
+
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 17.11px;
+		color: $main-clr;
+	}
+	a:active {
+		text-decoration: underline;
+	}
+}
