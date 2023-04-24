@@ -22,7 +22,8 @@
 		line-height: 17.11px;
 		color: $main-clr;
 	}
-	a:active {
+	.active {
 		text-decoration: underline;
+		padding-bottom: 2px;
 	}
 }

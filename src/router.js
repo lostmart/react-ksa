@@ -5,8 +5,8 @@ import {
 } from 'react-router-dom'
 
 // Pages
-import Home from './pages/Home.jsx'
-import About from './pages/About.jsx'
+import Home from './pages/Home'
+import About from './pages/About'
 
 //layouts
 import RootLayout from './layouts/RootLayout.jsx'
