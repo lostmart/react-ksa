@@ -1,10 +1,11 @@
 import React from 'react'
+import Banner from '../../components/Banner.jsx'
 
 const About = () => {
 	return (
-		<div>
-			<h2>About KASA</h2>
-		</div>
+		<section>
+			<Banner />
+		</section>
 	)
 }
 
