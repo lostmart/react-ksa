@@ -1,13 +1,15 @@
-@mixin responsive($breakpoint) {
-	@media only screen and (min-width: $breakpoint) {
-		@content;
-	}
-}
+@import '../../styles/mixins';
+
 .home {
 	&__cardContainer {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		flex-wrap: wrap;
+		max-width: 1200px;
+		justify-content: space-around;
+		margin: auto;
+		gap: 12px;
 
 		@include responsive(768px) {
 			flex-direction: row;

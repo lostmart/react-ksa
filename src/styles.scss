@@ -1,15 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import './styles/variables';
 @import './styles/header';
+@import './styles/mixins';
 
 * {
 	font-family: 'Montserrat', sans-serif;
 	color: $font-clr;
 }
 img {
-	max-width: 100%;
+	width: 100%;
 }
 
-.root_layout {
+.header {
+	@include maxWidthCtrl(1240px);
 	padding: 20px;
+}
+
+main {
+	@include maxWidthCtrl(1240px);
+	padding-left: 20px;
+	padding-right: 20px;
 }

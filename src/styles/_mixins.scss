@@ -1,0 +1,10 @@
+@mixin responsive($breakpoint) {
+	@media only screen and (min-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin maxWidthCtrl($maxwidth) {
+	max-width: $maxwidth;
+	margin: auto;
+}

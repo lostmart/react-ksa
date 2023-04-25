@@ -1,11 +1,15 @@
+@import '../styles/variables';
+
 .card {
 	width: 100%;
 	min-height: 255px;
-	background-color: #ff6060;
+	background-color: $main-clr;
 	margin-top: 22px;
 	border-radius: 10px;
 	position: relative;
 	overflow: hidden;
+	min-width: 320px;
+	max-width: 340px;
 
 	&::after {
 		content: '';
