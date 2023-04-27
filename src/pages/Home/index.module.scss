@@ -13,6 +13,7 @@
 
 		@include responsive(768px) {
 			flex-direction: row;
+			margin-bottom: 70px;
 		}
 	}
 }

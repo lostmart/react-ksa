@@ -1,3 +1,5 @@
+@import '../styles/mixins';
+
 .home__banner {
 	border-radius: 10px;
 	overflow: hidden;
@@ -7,6 +9,12 @@
 	align-items: center;
 	position: relative;
 	margin-top: 16px;
+
+	@include responsive(768px) {
+		max-height: 223px;
+		border-radius: 25px;
+		margin-bottom: 76px;
+	}
 
 	&::after {
 		content: '';
@@ -28,5 +36,13 @@
 		font-size: 24px;
 		left: 16px;
 		max-width: 222px;
+
+		@include responsive(768px) {
+			left: 50%;
+			max-width: fit-content;
+			transform: translateX(-50%);
+			font-size: 48px;
+			min-width: 705px;
+		}
 	}
 }
