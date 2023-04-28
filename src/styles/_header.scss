@@ -1,4 +1,7 @@
 .header {
+	padding: $padding-gral;
+	@include maxWidthCtrl(1240px);
+
 	&__navBar {
 		display: flex;
 		justify-content: space-between;
@@ -12,6 +15,9 @@
 	&__navBar__links {
 		display: flex;
 		gap: 10px;
+		@include responsive(768px) {
+			gap: 58px;
+		}
 	}
 
 	a {
@@ -21,6 +27,10 @@
 		font-weight: 500;
 		line-height: 17.11px;
 		color: $main-clr;
+		@include responsive(768px) {
+			text-transform: none;
+			font-size: 24px;
+		}
 	}
 	.active {
 		text-decoration: underline;

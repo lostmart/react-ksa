@@ -1,8 +1,7 @@
-import bannerImg from '../assets/kasa-banner.jpg'
 import PropTypes from 'prop-types'
 import styles from './Banner.module.scss'
 
-const Banner = ({ title }) => {
+const Banner = ({ bannerImg, title }) => {
 	return (
 		<section className={styles.home__banner}>
 			<img src={bannerImg} alt="kasa banner" />
@@ -13,6 +12,7 @@ const Banner = ({ title }) => {
 
 Banner.propTypes = {
 	title: PropTypes.string,
+	bannerImg: PropTypes.string,
 }
 
 export default Banner

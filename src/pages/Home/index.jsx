@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './index.module.scss'
 import Banner from '../../components/Banner.jsx'
 import Card from '../../components/Card.jsx'
+import bannerImg from '../../assets/kasa-banner.jpg'
 // import LogemontData from './data/mock-data.json'
 
 const Home = () => {
@@ -11,7 +12,7 @@ const Home = () => {
 	})
 	return (
 		<section className={styles.home}>
-			<Banner title="Chez vous, partout et ailleurs" />
+			<Banner bannerImg={bannerImg} title="Chez vous, partout et ailleurs" />
 			<div className={styles.home__cardContainer}>{listItems}</div>
 		</section>
 	)

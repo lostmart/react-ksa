@@ -1,7 +1,13 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .container {
-	text-align: center;
+	min-height: 83vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
 	span,
 	h4,
 	a {
@@ -9,14 +15,23 @@
 	}
 	span {
 		font-weight: 700;
-		font-size: 288px;
+		font-size: 96px;
+		@include responsive(768px) {
+			font-size: 288px;
+		}
 	}
 	h4 {
 		font-weight: 500;
-		font-size: 36px;
+		font-size: 18px;
+		@include responsive(768px) {
+			font-size: 36px;
+		}
 	}
 	a {
 		font-weight: 500;
-		font-size: 18px;
+		font-size: 14px;
+		@include responsive(768px) {
+			font-size: 18px;
+		}
 	}
 }

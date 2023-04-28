@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 @import './styles/variables';
-@import './styles/header';
 @import './styles/mixins';
+@import './styles/header';
 
 * {
 	font-family: 'Montserrat', sans-serif;
@@ -11,15 +11,10 @@ img {
 	width: 100%;
 }
 
-.header {
-	@include maxWidthCtrl(1240px);
-	padding: 20px;
-}
-
 main {
 	@include maxWidthCtrl(1240px);
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: $padding-gral;
+	padding-right: $padding-gral;
 }
 
 .d-none {
