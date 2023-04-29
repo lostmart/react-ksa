@@ -1,14 +1,22 @@
 @import '../styles/variables';
-@import '../styles/animations';
+@import '../styles/mixins';
 
 $radius: 5px;
 
 .accordion_item {
+	max-width: 1020px;
+	margin: auto;
+
 	h2 {
 		font-size: 22px;
 		background-color: $main-clr;
 		border-radius: $radius;
 		margin-bottom: 10px;
+
+		@include responsive(768px) {
+			padding-top: 9px;
+			padding-bottom: 9px;
+		}
 	}
 
 	h2 button {
@@ -38,9 +46,11 @@ $radius: 5px;
 	.accordion_body {
 		color: $main-clr;
 		font-size: 12px;
-		padding: 7px;
+		padding: 0 18px;
+		max-height: 0;
 		overflow: hidden;
-		animation: toggleAccordion 1500ms ease-in-out;
-		height: fit-content;
+		transition: max-height 0.2s ease-out;
+		// background-color: #f6f6f6;
+		background-color: #959595;
 	}
 }
