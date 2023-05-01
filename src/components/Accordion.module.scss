@@ -11,7 +11,7 @@ $radius: 5px;
 		font-size: 22px;
 		background-color: $main-clr;
 		border-radius: $radius;
-		margin-bottom: 10px;
+		margin-bottom: 0;
 
 		@include responsive(768px) {
 			padding-top: 9px;
@@ -46,11 +46,13 @@ $radius: 5px;
 	.accordion_body {
 		color: $main-clr;
 		font-size: 12px;
-		padding: 0 18px;
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.2s ease-out;
-		// background-color: #f6f6f6;
-		background-color: #959595;
+		background-color: #f6f6f6;
+		position: relative;
+		z-index: -1;
+		padding: 0 16px 0 16px;
+		transform: translateY(-5px);
 	}
 }
