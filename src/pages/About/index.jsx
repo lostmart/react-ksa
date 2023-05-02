@@ -6,7 +6,7 @@ import Accordion from '../../components/Accordion.jsx'
 const About = () => {
 	return (
 		<section>
-			<Banner bannerImg={bannerImg} />
+			<Banner bannerImg={bannerImg} maxHeight="223px" />
 			<Accordion />
 		</section>
 	)
