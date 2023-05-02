@@ -11,6 +11,12 @@
 		margin: auto;
 		gap: 12px;
 
+		a {
+			width: 100%;
+			min-width: 320px;
+			max-width: 340px;
+		}
+
 		@include responsive(768px) {
 			flex-direction: row;
 			margin-bottom: 70px;

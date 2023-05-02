@@ -1,8 +1,12 @@
 import PropTypes from 'prop-types'
 import styles from './Card.module.scss'
-const Card = ({ title }) => {
+const Card = ({ title, cardData }) => {
+	const imageSrc = cardData.cover
+	const cardImgaStyle = {
+		backgroundImage: `url(${imageSrc})`,
+	}
 	return (
-		<article className={styles.card}>
+		<article className={styles.card} style={cardImgaStyle}>
 			<h3>{title}</h3>
 		</article>
 	)
@@ -10,6 +14,7 @@ const Card = ({ title }) => {
 
 Card.propTypes = {
 	title: PropTypes.string,
+	cardData: PropTypes.object,
 }
 
 export default Card

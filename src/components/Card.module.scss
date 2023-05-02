@@ -8,8 +8,10 @@
 	border-radius: 10px;
 	position: relative;
 	overflow: hidden;
-	min-width: 320px;
-	max-width: 340px;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
 	&::after {
 		content: '';
@@ -28,11 +30,11 @@
 
 	h3 {
 		position: absolute;
-		left: 20px;
+		left: 18px;
 		bottom: 15px;
 		font-size: 18px;
 		font-weight: normal;
-		max-width: 92px;
+		max-width: 90%;
 		z-index: 1;
 	}
 }

@@ -1,0 +1,10 @@
+@import '../styles/variables';
+
+.tags {
+	background-color: $main-clr;
+	border-radius: 10px;
+	padding: 3px 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

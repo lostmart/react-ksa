@@ -1,0 +1,14 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.logementContainer {
+	h2,
+	p {
+		color: $main-clr;
+	}
+
+	.tagsContainer {
+		display: flex;
+		gap: 10px;
+	}
+}
