@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types'
 import styles from './Banner.module.scss'
 
+const height = '223px'
+
 const Banner = ({ bannerImg, title }) => {
 	return (
-		<section className={styles.home__banner}>
+		<section className={styles.home__banner} style={{ maxHeight: height }}>
 			<img src={bannerImg} alt="kasa banner" />
-			<h2>{title}</h2>
+			{title ? <h2>{title}</h2> : ''}
 		</section>
 	)
 }
