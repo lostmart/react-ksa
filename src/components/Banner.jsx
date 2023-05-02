@@ -16,6 +16,4 @@ Banner.propTypes = {
 	maxHeight: PropTypes.string,
 }
 
-Banner.defaultProps = { maxHeight: '111px' }
-
 export default Banner
