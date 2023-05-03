@@ -39,7 +39,7 @@ const Logement = () => {
 			<div className={styles.ratingAndHost}>
 				<div>{starList}</div>
 				<Greeter
-					greeterName="Pepe francisco"
+					greeterName={logement.host.name}
 					avatarUrl={logement.host.picture}
 				/>
 			</div>
