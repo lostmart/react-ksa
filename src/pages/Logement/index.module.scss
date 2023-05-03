@@ -7,8 +7,25 @@
 		color: $main-clr;
 	}
 
+	.ratingAndHost {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 16px;
+	}
+
 	.tagsContainer {
 		display: flex;
 		gap: 10px;
+		flex-wrap: wrap;
+	}
+
+	.equipments {
+		ul,
+		li {
+			color: $main-clr;
+			list-style-type: none;
+			padding-left: 12px;
+		}
 	}
 }

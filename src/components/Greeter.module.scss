@@ -1,0 +1,20 @@
+@import '../styles/variables';
+
+.greeterConatiner {
+	display: flex;
+	align-items: center;
+	gap: 11px;;
+
+	span {
+		color: $main-clr;
+		font-size: 12px;
+		word-break: break-word;
+		max-width: 60px;
+		display: block;
+		text-align: right;
+	}
+	img {
+		max-width: 32px;
+		border-radius: 50%;
+	}
+}

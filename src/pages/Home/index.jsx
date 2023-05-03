@@ -9,7 +9,7 @@ import LogemontData from '../../data/mock-data.json'
 const Home = () => {
 	const listItems = LogemontData.map((card, indx) => {
 		return (
-			<NavLink key={card.id} to={`/logement/log?id=${card.id}`}>
+			<NavLink key={card.id} to={`/logement/${card.id}`}>
 				<Card title={card.title} cardData={card} />
 			</NavLink>
 		)
