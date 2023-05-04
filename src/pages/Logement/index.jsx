@@ -43,15 +43,8 @@ const Logement = () => {
 					avatarUrl={logement.host.picture}
 				/>
 			</div>
-			<Accordion />
-
-			<div className={styles.equipments}>
-				<ul>
-					{logement.equipments.map((item, indx) => (
-						<li key={indx}>{item}</li>
-					))}
-				</ul>
-			</div>
+			<Accordion title="Description" body={logement.description} />
+			<Accordion title="Équipements" body={logement.equipments} />
 		</section>
 	)
 }

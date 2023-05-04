@@ -1,33 +1,60 @@
 import style from './Accordion.module.scss'
-import txtData from '../data/aboutData.json'
+import arrow from '../assets/arrow_back.svg'
+import React, { useRef, useState } from 'react'
+import PropTypes from 'prop-types'
 
-const Accordion = () => {
-	const handleClick = (e) => {
-		let panel = e.target.parentElement.nextElementSibling
-		// panel.style.maxHeight
-		// 	? (panel.style.maxHeight = null)
-		// 	: (panel.style.maxHeight = panel.scrollHeight + 'px')
-		if (panel.style.maxHeight) {
-			panel.style.maxHeight = null
+const Accordion = ({ title, body }) => {
+	const bodyRef = useRef(null)
+	const arrowRef = useRef(null)
+
+	const [active, setActive] = useState(false)
+
+	const handleClick = () => {
+		const panel = bodyRef.current
+		const arrow = arrowRef.current
+
+		if (active) {
+			setActive(!active)
+			panel.style.maxHeight = '0'
 			panel.style.padding = '0 16px 0 16px'
+			arrow.style.rotate = '0deg'
 		} else {
+			setActive(!active)
 			panel.style.maxHeight = panel.scrollHeight + 'px'
 			panel.style.padding = '18px 16px 12px 16px'
+			arrow.style.rotate = '180deg'
 		}
 	}
 
 	return (
-		<>
-			{txtData.map((panel, index) => (
-				<div key={index} className={style.accordion_item}>
-					<h2>
-						<button onClick={handleClick}>{panel.title}</button>
-					</h2>
-					<div className={style.accordion_body}>{panel.text}</div>
-				</div>
-			))}
-		</>
+		<div className={style.accordion_item}>
+			<h2 onClick={handleClick}>
+				<button>
+					{title}
+					<img ref={arrowRef} src={arrow} alt="arrow" />
+				</button>
+			</h2>
+			<div ref={bodyRef} className={style.accordion_body}>
+				{Array.isArray(body) ? (
+					<ul>
+						{body.map((item, index) => (
+							<li key={index}>{item}</li>
+						))}
+					</ul>
+				) : (
+					<>{body}</>
+				)}
+			</div>
+		</div>
 	)
+}
+
+Accordion.propTypes = {
+	title: PropTypes.string,
+	body: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.arrayOf(PropTypes.string),
+	]),
 }
 
 export default Accordion
