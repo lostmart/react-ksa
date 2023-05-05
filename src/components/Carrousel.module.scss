@@ -1,10 +1,11 @@
 .carouselContainer {
-	max-width: 1000px;
+	max-width: 1240px;
 	position: relative;
 	margin: auto;
 
 	.carouselItem {
-		max-height: 335px;
+		max-height: 305px;
+		min-height: 180px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
