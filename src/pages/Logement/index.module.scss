@@ -7,28 +7,55 @@
 		color: $main-clr;
 	}
 
+	.articleContainer {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+			'title title'
+			'sub-title sub-title'
+			'tags tags'
+			'rating greater';
+		@include responsive(768px) {
+			grid-template-areas:
+				'title greater'
+				'sub-title greater'
+				'tags rating';
+		}
+	}
+
 	h2 {
 		font-size: 18px;
 		font-weight: normal;
 		margin-block-end: 5px;
+		grid-area: title;
 	}
 
 	p {
 		margin-block-start: 0;
 		font-size: 14px;
+		grid-area: sub-title;
 	}
-
-	.starCont {
-		display: flex;
-		gap: 4px;
-	}
-
-
 
 	.tagsContainer {
 		display: flex;
 		gap: 10px;
 		flex-wrap: wrap;
+		grid-area: tags;
+	}
+
+	.starCont {
+		display: flex;
+		gap: 4px;
+		grid-area: rating;
+		@include responsive(768px) {
+			justify-content: flex-end;
+		}
+	}
+
+	.greater {
+		grid-area: greater;
 	}
 
 	.equipments {
@@ -37,6 +64,13 @@
 			color: $main-clr;
 			list-style-type: none;
 			padding-left: 12px;
+		}
+	}
+
+	.acrodionContainers {
+		@include responsive(768px) {
+			display: flex;
+			justify-content: space-between;
 		}
 	}
 }

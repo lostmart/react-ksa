@@ -4,8 +4,12 @@
 $radius: 5px;
 
 .accordion_item {
-	max-width: 1020px;
+	max-width: 582px;
 	margin: auto;
+	@include responsive(768px) {
+		margin: 0;
+		width: 100%;
+	}
 
 	h2 {
 		font-size: 22px;
