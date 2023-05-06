@@ -43,6 +43,10 @@ $radius: 5px;
 		padding: 5px 16px;
 		cursor: pointer;
 		font-size: 14px;
+
+		@include responsive(768px) {
+			font-size: 22px;
+		}
 	}
 
 	.accordion_body {
@@ -56,6 +60,10 @@ $radius: 5px;
 		z-index: -1;
 		padding: 0 16px 0 16px;
 		transform: translateY(-5px);
+
+		@include responsive(768px) {
+			font-size: 24px;
+		}
 	}
 
 	.accordion_body ul {
@@ -68,4 +76,9 @@ $radius: 5px;
 		color: $main-clr;
 		list-style-type: none;
 	}
+}
+
+.about_item {
+	max-width: 1023px;
+	margin: auto;
 }

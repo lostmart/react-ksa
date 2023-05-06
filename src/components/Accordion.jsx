@@ -1,9 +1,14 @@
 import style from './Accordion.module.scss'
 import arrow from '../assets/arrow_back.svg'
 import React, { useRef, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-const Accordion = ({ title, body }) => {
+const Accordion = ({ title, body, extraClass }) => {
+	let location = useLocation()
+
+	console.log(location.pathname)
+
 	const bodyRef = useRef(null)
 	const arrowRef = useRef(null)
 
@@ -27,7 +32,12 @@ const Accordion = ({ title, body }) => {
 	}
 
 	return (
-		<div className={style.accordion_item}>
+		<div
+			className={
+				location.pathname === '/about'
+					? style.about_item + ' ' + style.accordion_item
+					: style.accordion_item
+			}>
 			<h2 onClick={handleClick}>
 				<button>
 					{title}
@@ -55,6 +65,7 @@ Accordion.propTypes = {
 		PropTypes.string,
 		PropTypes.arrayOf(PropTypes.string),
 	]),
+	extraClass: PropTypes.string,
 }
 
 export default Accordion

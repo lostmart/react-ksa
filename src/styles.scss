@@ -17,6 +17,11 @@ main {
 	padding-right: $padding-gral;
 }
 
+.root_layout {
+	min-height: 84vh;
+	position: relative;
+}
+
 .d-none {
 	display: none !important;
 }

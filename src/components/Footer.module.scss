@@ -6,8 +6,9 @@
 	justify-content: flex-end;
 	height: 209px;
 	margin-top: 1em;
-	position: relative;
-	bottom: 0;
+	position: absolute;
+	bottom: -222px;
+	width: 100%;
 
 	img {
 		max-width: 122px;
