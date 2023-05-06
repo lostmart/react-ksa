@@ -1,5 +1,5 @@
 import LogemontData from '../../data/mock-data.json'
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import styles from './index.module.scss'
 import Tag from '../../components/Tag.jsx'
 import Star from '../../components/Star'
@@ -9,8 +9,10 @@ import Carrousel from '../../components/Carrousel'
 
 const Logement = () => {
 	let { locationId } = useParams()
+
 	// find correct app
 	const logement = LogemontData.find(({ id }) => id === locationId)
+	if (!logement) return <Navigate to="/404" replace={true} />
 
 	const starList = []
 	for (let i = 0; i < 5; i++) {
@@ -21,7 +23,6 @@ const Logement = () => {
 		)
 	}
 
-	//console.log(logement.rating)
 	return (
 		<section className={styles.logementContainer}>
 			<Carrousel imgsArray={logement.pictures} />
