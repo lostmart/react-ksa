@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 const Accordion = ({ title, body, extraClass }) => {
 	let location = useLocation()
 
-	console.log(location.pathname)
+	// console.log(location.pathname)
 
 	const bodyRef = useRef(null)
 	const arrowRef = useRef(null)
