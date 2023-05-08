@@ -20,6 +20,8 @@
 	img {
 		width: 100%;
 		vertical-align: middle;
+		min-height: 255px;
+		object-fit: cover;
 	}
 
 	.numbertext {
