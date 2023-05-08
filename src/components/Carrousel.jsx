@@ -1,6 +1,6 @@
 import styles from './Carrousel.module.scss'
 import { useState } from 'react'
-//import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
 const Carrousel = ({ imgsArray }) => {
 	const [active, setActive] = useState(0)
@@ -41,8 +41,8 @@ const Carrousel = ({ imgsArray }) => {
 	)
 }
 
-// Carrousel.propTypes = {
-// 	imgsArray: PropTypes.array,
-// }
+Carrousel.propTypes = {
+	imgsArray: PropTypes.array,
+}
 
 export default Carrousel

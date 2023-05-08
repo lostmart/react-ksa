@@ -13,24 +13,6 @@ const About = () => {
 			))}
 		</section>
 	)
-
-	/*
-	return (
-		<>
-			{txtData.map((panel, index) => (
-				<div key={index} className={style.accordion_item}>
-					<h2>
-						<button onClick={() => handleClick(index)}>
-							{panel.title}
-							<img src={arrow} alt="arrow" />
-						</button>
-					</h2>
-					<div className={style.accordion_body}>{panel.text}</div>
-				</div>
-			))}
-		</>
-	)
-	*/
 }
 
 export default About
